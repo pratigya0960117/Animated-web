@@ -1,0 +1,415 @@
+*  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'gilroy';
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    /* background-color: black; */
+    position: relative;
+    z-index: 10;
+}
+
+#page1{
+   min-height: 100vh;
+    width: 100%;
+    background-color:#EFEAE3 ;
+    position: relative;
+    padding: 0 2vw;
+}
+nav{
+    padding: 2vw 0vw;
+    height: 100px;
+    width: 100%;
+    gap: 1vw;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+}
+#nav-part2{
+    display: flex;
+    align-items: center;
+}
+#nav-part2 h4{
+    padding: 10px 20px;
+    border: 1px solid gray;
+    border-radius: 50px;
+    font-weight: 500;
+    color: black;
+    position: relative;
+    margin: 5px;
+    font-size: 18px;
+    overflow: hidden;
+}
+#nav-part2 h4::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+}
+#nav-part2 h4:hover::after{
+    bottom: 0;
+    border-radius: 0;
+} 
+#nav-part2 h4 a{
+    color: black;
+    position: relative;
+    z-index: 9;
+}
+#nav-part2 h4:hover a{
+    color: white;
+}
+nav h3{
+    display: none;
+}
+#centre{
+    height: 50vh;
+    width: 100%;
+    /* background-color: orange; */
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom:1px solid black;
+    padding-bottom: 2vw;
+}
+#left h3{
+    width: 25vw;
+    font-size: 1.8vw;
+    line-height: 2vw;
+
+}
+#centre h1{
+   font-size: 6vw; 
+   text-align: right;
+   line-height: 6vw;
+}
+#page1 video{
+    position: relative;
+    width: 105%;
+    margin: 2vw;
+    border-radius: 30px;
+    margin-left: -5vh;
+
+}
+/* hero shape bs wrapper ka kaam karega */
+#hero-shape{
+    position: absolute;
+    width: 32vw;
+    height: 20vw;
+    background-color: rgb(255, 0, 0); 
+    /* border-radius: 50%; */
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    right: 0;
+    top: 56vh;
+    filter: blur(15px);
+    
+}
+#pop1{
+    background-color: #ff0000;
+    height: 30vw;
+    width: 30vw;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(20px);
+    position: absolute;
+}
+#pop2{
+    background-color:rgb(255, 72, 0);
+    height: 30vw;
+    width: 25vw;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(20px);
+    position: absolute;
+    animation-name: anime2;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+#pop3{
+    background-color: rgb(255, 51, 0);
+    height: 50vw;
+    width: 30vw;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(20px);
+    position: absolute;
+    animation-name: anime1;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+@keyframes anime1 {
+    from{
+        transform: translate(10%,-15%);
+    }
+    to{
+        transform: translate(0%,20%);
+    }
+}
+@keyframes anime2 {
+    from{
+        transform: translate(5%,-15%)skew(20);
+    }
+    to{
+        transform: translate(-20%,0%)skew(-15%);
+    }
+}
+
+#page2{
+    padding: 5vw;
+   min-height: 100vh;
+    width: 108%;
+    margin-left: -9vh;
+    background-color:#EFEAE3 ;
+}
+#moving-text{
+    overflow-x: auto;
+    white-space: nowrap;
+}
+#moving-text::-webkit-scrollbar{
+    display: none;
+}
+.con{
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: movescroll;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#moving-text h1{
+    font-size: 7vw;
+    display: inline-block;
+}
+#gola{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #ff0000;
+    display: inline-block;
+    margin: 1vw 2vw ;
+}
+@keyframes movescroll {
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translate(-100%);
+    }
+}
+#page2-bottom{
+    height: 80vh;
+    margin-left: -2vh;
+    width: 103%;
+    background-color: aliceblue;
+    display: flex;
+    align-items: centre;
+    justify-content: space-between;
+    position: relative;
+}
+#page2-bottom h1{
+    font-size: 2.5vw;
+     width: 50%;
+     margin-left: 5vw;
+     font-style: normal;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     margin-top: 5vw;
+     border-radius: 15px;
+     position: relative;
+     z-index: 9;
+}
+#bottom-part2{
+    width: 20;
+    background-color: aqua;
+}
+#page2-image{
+    width: 100%;
+    height: 30%;
+    margin-left: 31vw;
+    font-size: medium;
+    margin-top: 7vw;
+
+}
+#gola2{
+    background-color: rgb(255, 51, 0);
+    height: 33vw;
+    width: 33vw;
+    border-radius: 50%;
+    filter: blur(20px);
+    position: absolute;
+    margin-top: 7%;
+    margin-left: 15%;
+    background: linear-gradient( red,orange);
+    animation-name: gola2;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+@keyframes gola2 {
+    from{
+        transform: translate(10%,-10%)skew(0);
+    }
+    to{
+        transform: translate(-10%,0%)skew(-20deg);
+    }
+    
+}
+#page3{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    position: relative;
+    padding: -4vw 0;
+}
+.elem{
+     height: 85PX;
+     width: 100%;
+     /* background-color: orange; */
+     display: flex;
+     align-items: center;
+     padding: 0 2vw; 
+     position: relative;
+     overflow: hidden;
+     border-bottom: 1px solid;
+}
+.elem h2{
+    font-size: 2.5vw;
+    position: relative;
+    z-index: 9;
+}
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 162, 0);
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all ease 0.3s ;
+}
+.elem:hover .overlay{
+    top: 0;
+}
+#elem-container{
+   
+}
+#fixed-image{
+    height: 29vw;
+    width: 23vw;
+    background-color: red;
+    border-radius: 10px;
+    position: fixed;
+    z-index: 99;
+    left: 50%;
+    top: 50%;
+    display: none;
+    /* background-image: image("C:\\Users\\Pratigya Sharma\\Downloads\\web site\\New folder\\imagee.jpg"); */
+}
+#page4{
+    height:60vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding: 8vw 2vw;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+    border-left: 1px solid #00000000;
+  }
+
+  .swiper-slide {
+    width: 30%;
+    border-left: 1px solid;
+  }
+
+ 
+  
+#page5{
+    height:100vh;
+    width: 100%;
+    /* background-color: #EFEAE3; */
+}
+#footer{
+    position: fixed;
+    z-index: 9;
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    color: white;
+    z-index: 9;
+    bottom: 0;
+     display: flex;
+    /* align-items: flex-end; */
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 1vw 3vw;
+}
+#footer h1{
+    font-size: 23vw;
+}
+#footer-div{
+    height: 20vh;
+    width: 100%;
+    background-color: red;
+}
+#footer-bottom{
+    border-top: 1px solid #dadada;
+    height: 10vh;
+    width: 100%;
+}
+#footer-div h3{
+    right: 0%;
+}
+#full-scr{
+    height: 100vh;
+    width: 100%;
+    background-color: #00000070;
+    position:fixed;
+    z-index: 99;
+    top: -100%;
+}
+@media (max-width:600px) {
+    #page1{
+        min-height: 100vh;
+         width: 100vw;
+         padding: 0 5vw;
+     }
+     nav{
+         padding: 8vw 0vw;
+         position: relative;
+         z-index: 100;
+     }
+     nav-image{
+        height: 9vh;
+     }
+     #nav-part2{
+        
+         display: none;
+     }
+     nav h3{
+        display: block;
+        padding: 2vw 5vw;
+        border: 1px solid;
+        border-radius: 50px;
+        font-size: 4vw;
+        font-weight: 200;
+        padding-left: 10vw;
+    }   
+}
